@@ -3,7 +3,12 @@ import React from "react";
 import { Alert, Snackbar } from "@mui/material";
 import Slide from "@mui/material/Slide";
 
-function BottomCenterAlert({ isShown, onClose, alertMessage, autoHideDuration }) {
+function BottomCenterAlert({
+  isShown,
+  onClose,
+  alertMessage,
+  autoHideDuration,
+}) {
   return (
     <div>
       <Snackbar
