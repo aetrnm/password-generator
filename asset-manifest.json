@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e41044a.css",
-    "main.js": "/static/js/main.92b2633f.js",
-    "static/media/good.svg": "/static/media/good.323242ba56101f114ff647712853ebb6.svg",
-    "static/media/strong.svg": "/static/media/strong.6da574d771c869405a7d6da6cb92f793.svg",
-    "static/media/godlike.svg": "/static/media/godlike.e4672b858ae30ca3d7ec91dd63098e79.svg",
-    "static/media/weak.svg": "/static/media/weak.6bed6c48286325b207e84032fd6df55c.svg",
-    "static/media/verystrong.svg": "/static/media/verystrong.fde708234cfb24b5ea79af98a204f96b.svg",
-    "index.html": "/index.html",
-    "main.5e41044a.css.map": "/static/css/main.5e41044a.css.map",
-    "main.92b2633f.js.map": "/static/js/main.92b2633f.js.map"
+    "main.css": "/password-generator/static/css/main.5e41044a.css",
+    "main.js": "/password-generator/static/js/main.45bbdfc7.js",
+    "static/media/good.svg": "/password-generator/static/media/good.323242ba56101f114ff647712853ebb6.svg",
+    "static/media/strong.svg": "/password-generator/static/media/strong.6da574d771c869405a7d6da6cb92f793.svg",
+    "static/media/godlike.svg": "/password-generator/static/media/godlike.e4672b858ae30ca3d7ec91dd63098e79.svg",
+    "static/media/weak.svg": "/password-generator/static/media/weak.6bed6c48286325b207e84032fd6df55c.svg",
+    "static/media/verystrong.svg": "/password-generator/static/media/verystrong.fde708234cfb24b5ea79af98a204f96b.svg",
+    "index.html": "/password-generator/index.html",
+    "main.5e41044a.css.map": "/password-generator/static/css/main.5e41044a.css.map",
+    "main.45bbdfc7.js.map": "/password-generator/static/js/main.45bbdfc7.js.map"
   },
   "entrypoints": [
     "static/css/main.5e41044a.css",
-    "static/js/main.92b2633f.js"
+    "static/js/main.45bbdfc7.js"
   ]
 }
