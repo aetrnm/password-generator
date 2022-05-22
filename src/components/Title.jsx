@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
 
 let theme = createTheme();
-theme = responsiveFontSizes(theme, { factor: 3 });
+theme = responsiveFontSizes(theme, { factor: 5 });
 
 function Title() {
   return (
