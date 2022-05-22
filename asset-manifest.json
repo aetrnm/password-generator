@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/password-generator/static/css/main.cdcc413e.css",
-    "main.js": "/password-generator/static/js/main.bea2066b.js",
+    "main.js": "/password-generator/static/js/main.2b74ab0a.js",
     "static/media/good.svg": "/password-generator/static/media/good.323242ba56101f114ff647712853ebb6.svg",
     "static/media/strong.svg": "/password-generator/static/media/strong.6da574d771c869405a7d6da6cb92f793.svg",
     "static/media/godlike.svg": "/password-generator/static/media/godlike.e4672b858ae30ca3d7ec91dd63098e79.svg",
@@ -9,10 +9,10 @@
     "static/media/verystrong.svg": "/password-generator/static/media/verystrong.fde708234cfb24b5ea79af98a204f96b.svg",
     "index.html": "/password-generator/index.html",
     "main.cdcc413e.css.map": "/password-generator/static/css/main.cdcc413e.css.map",
-    "main.bea2066b.js.map": "/password-generator/static/js/main.bea2066b.js.map"
+    "main.2b74ab0a.js.map": "/password-generator/static/js/main.2b74ab0a.js.map"
   },
   "entrypoints": [
     "static/css/main.cdcc413e.css",
-    "static/js/main.bea2066b.js"
+    "static/js/main.2b74ab0a.js"
   ]
 }
