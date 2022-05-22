@@ -11,21 +11,29 @@ import veryStrongIcon from "../imgs/verystrong.svg";
 import godLikeIcon from "../imgs/godlike.svg";
 
 function MyIcon({ passwordType }) {
+  let itemToReturn = null;
+
   switch (passwordType) {
     case passwordTypes.weak:
-      return <Icon src={weakIcon} />;
+      itemToReturn = <Icon src={weakIcon} />;
+      break;
     case passwordTypes.good:
-      return <Icon src={goodIcon} />;
+      itemToReturn = <Icon src={goodIcon} />;
+      break;
     case passwordTypes.strong:
-      return <Icon src={strongIcon} />;
+      itemToReturn = <Icon src={strongIcon} />;
+      break;
     case passwordTypes.veryStrong:
-      return <Icon src={veryStrongIcon} />;
+      itemToReturn = <Icon src={veryStrongIcon} />;
+      break;
     case passwordTypes.godLike:
-      return <Icon src={godLikeIcon} />;
-
+      itemToReturn = <Icon src={godLikeIcon} />;
+      break;
     default:
       break;
   }
+
+  return itemToReturn;
 }
 
 export default MyIcon;
