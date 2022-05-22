@@ -8,10 +8,10 @@ import MyBadge from "./components/MyBadge";
 import CopyButton from "./components/CopyButton";
 import BottomCenterAlert from "./components/BottomCenterAlert";
 import MySlider from "./components/MySlider";
+import CenteredContainer from "./components/CenteredContainer";
 
 import passwordTypes from "./tools/passwordTypes";
 import newPassword from "./tools/newPassword";
-import CenteredContainer from "./components/CenteredContainer";
 import MyIcon from "./components/MyIcon";
 
 function App() {
@@ -19,16 +19,11 @@ function App() {
   const [password, setPassword] = useState("");
   const [passwordLength, setPasswordLength] = useState(16);
   const [isShownSnackbar, setIsShownSnackbar] = useState(false);
+  const [anim, setAnim] = useState(false);
 
   useEffect(() => {
-    generatePassword();
+    setPassword(newPassword(passwordLength));
   }, []);
-
-  const handleSliderChange = (event, newLength) => {
-    setPasswordLength(newLength);
-    handlePasswordType(passwordLength);
-    generatePassword();
-  };
 
   function handlePasswordType(passwordLength) {
     if (passwordLength < 10) {
@@ -53,10 +48,11 @@ function App() {
     }
   }
 
-  function generatePassword() {
-    const pass = newPassword(passwordLength);
-    setPassword(pass);
-  }
+  const handleSliderChange = (event, newLength) => {
+    setPasswordLength(newLength);
+    handlePasswordType(newLength);
+    setPassword(newPassword(passwordLength));
+  };
 
   function handleCloseAlert() {
     setIsShownSnackbar(false);
