@@ -19,7 +19,6 @@ function App() {
   const [password, setPassword] = useState("");
   const [passwordLength, setPasswordLength] = useState(16);
   const [isShownSnackbar, setIsShownSnackbar] = useState(false);
-  const [anim, setAnim] = useState(false);
 
   useEffect(() => {
     setPassword(newPassword(passwordLength));
@@ -68,16 +67,16 @@ function App() {
       <Title />
       <Grid
         container
-        spacing={12}
+        spacing={2}
         style={{
           width: "80vw",
           marginBottom: 60,
         }}
       >
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} lg={5}>
           <MyIcon passwordType={passwordType} />
         </Grid>
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} lg={7}>
           <CenteredContainer>
             <OutlinedInput
               id="password-field"
