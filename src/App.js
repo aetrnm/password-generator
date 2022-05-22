@@ -71,6 +71,7 @@ function App() {
         spacing={12}
         style={{
           width: "80vw",
+          marginBottom: 60,
         }}
       >
         <Grid item xs={12} md={5}>
