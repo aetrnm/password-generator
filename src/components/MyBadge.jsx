@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { red } from "@mui/material/colors";
-import { yellow } from "@mui/material/colors";
-import { blue } from "@mui/material/colors";
-import { green } from "@mui/material/colors";
+import { red } from '@mui/material/colors';
+import { yellow } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
+import { green } from '@mui/material/colors';
 
-import passwordTypes from "../tools/passwordTypes";
+import passwordTypes from '../tools/passwordTypes';
 
 function MyBadge({ passwordType }) {
   switch (passwordType) {
@@ -53,7 +53,7 @@ function MyBadge({ passwordType }) {
           {passwordType.toUpperCase()}
         </div>
       );
-    case passwordTypes.godLike:
+    case passwordTypes.godlike:
       return (
         <div
           style={{
@@ -71,9 +71,9 @@ function MyBadge({ passwordType }) {
 }
 
 const defaultStyles = {
-  color: "white",
-  borderRadius: "10px",
-  fontWeight: "bold",
+  color: 'white',
+  borderRadius: '10px',
+  fontWeight: 'bold',
   fontSize: 16,
   paddingLeft: 14,
   paddingRight: 10,
