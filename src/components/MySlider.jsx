@@ -1,12 +1,12 @@
-import { Slider } from "@mui/material";
-import React from "react";
-import { marks } from "../tools/passwordSliderMarks";
+import { Slider } from '@mui/material';
+import React from 'react';
+import { marks } from '../tools/passwordSliderMarks';
 
 function MySlider({ passwordLength, onChange }) {
   return (
     <>
       <Slider
-        aria-label="Password Length"
+        aria-label='Password Length'
         defaultValue={16}
         value={passwordLength}
         step={1}

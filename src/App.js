@@ -83,7 +83,7 @@ function App() {
               readOnly
               value={password}
               endAdornment={
-                <InputAdornment position='end'>
+                <InputAdornment position='end' variant='filled'>
                   <MyBadge passwordType={passwordType} />
                 </InputAdornment>
               }
