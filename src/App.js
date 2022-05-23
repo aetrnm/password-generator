@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { Grid, OutlinedInput } from "@mui/material";
-import InputAdornment from "@mui/material/InputAdornment";
+import { Grid, OutlinedInput } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
 
-import Title from "./components/Title";
-import MyBadge from "./components/MyBadge";
-import CopyButton from "./components/CopyButton";
-import BottomCenterAlert from "./components/BottomCenterAlert";
-import MySlider from "./components/MySlider";
-import CenteredContainer from "./components/CenteredContainer";
+import Title from './components/Title';
+import MyBadge from './components/MyBadge';
+import CopyButton from './components/CopyButton';
+import BottomCenterAlert from './components/BottomCenterAlert';
+import MySlider from './components/MySlider';
+import CenteredContainer from './components/CenteredContainer';
 
-import passwordTypes from "./tools/passwordTypes";
-import newPassword from "./tools/newPassword";
-import MyIcon from "./components/MyIcon";
+import passwordTypes from './tools/passwordTypes';
+import newPassword from './tools/newPassword';
+import IconWrapper from './components/IconWrapper';
 
 function App() {
   const [passwordType, setPasswordType] = useState(passwordTypes.strong);
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
   const [passwordLength, setPasswordLength] = useState(16);
   const [isShownSnackbar, setIsShownSnackbar] = useState(false);
 
@@ -42,7 +42,7 @@ function App() {
       return;
     }
     if (passwordLength === 30) {
-      setPasswordType(passwordTypes.godLike);
+      setPasswordType(passwordTypes.godlike);
       return;
     }
   }
@@ -69,21 +69,21 @@ function App() {
         container
         spacing={2}
         style={{
-          width: "80vw",
+          width: '80vw',
           marginBottom: 60,
         }}
       >
         <Grid item xs={12} lg={5}>
-          <MyIcon passwordType={passwordType} />
+          <IconWrapper passwordType={passwordType} />
         </Grid>
         <Grid item xs={12} lg={7}>
           <CenteredContainer>
             <OutlinedInput
-              id="password-field"
+              id='password-field'
               readOnly
               value={password}
               endAdornment={
-                <InputAdornment position="end">
+                <InputAdornment position='end'>
                   <MyBadge passwordType={passwordType} />
                 </InputAdornment>
               }
@@ -103,7 +103,7 @@ function App() {
       <BottomCenterAlert
         isShown={isShownSnackbar}
         onClose={handleCloseAlert}
-        alertMessage="Copied successfully"
+        alertMessage='Copied successfully'
         autoHideDuration={2000}
       />
     </CenteredContainer>
