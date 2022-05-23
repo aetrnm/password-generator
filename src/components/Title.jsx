@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Typography from "@mui/material/Typography";
-import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
+import Typography from '@mui/material/Typography';
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material';
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme, { factor: 5 });
@@ -10,10 +10,10 @@ function Title() {
   return (
     <div style={{ marginTop: 20, marginBottom: 60 }}>
       <ThemeProvider theme={theme}>
-        <Typography variant="h1" component="div" gutterBottom>
+        <Typography variant='h2' component='div' gutterBottom>
           Random Password Generator
         </Typography>
-        <Typography variant="h5" gutterBottom component="div">
+        <Typography variant='subtitle1' gutterBottom component='div'>
           Create strong and secure passwords to keep your account safe online.
         </Typography>
       </ThemeProvider>
