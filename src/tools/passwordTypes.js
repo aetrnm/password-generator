@@ -1,7 +1,9 @@
-export default {
-  weak: "weak",
-  good: "good",
-  strong: "strong",
-  veryStrong: "very strong",
-  godLike: "godlike",
+const passwordTypes = {
+  weak: 'weak',
+  good: 'good',
+  strong: 'strong',
+  veryStrong: 'very strong',
+  godlike: 'godlike',
 };
+
+export default passwordTypes;
