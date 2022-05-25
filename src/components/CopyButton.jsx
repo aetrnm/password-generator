@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { Button } from '@mui/material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { Button } from "@mui/material";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 function CopyButton({ onClick }) {
   return (
     <>
       <Button
-        variant='contained'
+        variant="contained"
         onClick={onClick}
-        size='large'
+        size="large"
         startIcon={<ContentCopyIcon />}
       >
         Copy

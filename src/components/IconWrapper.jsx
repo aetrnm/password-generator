@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Icon from './Icon';
+import Icon from "./Icon";
 
-import passwordTypes from '../tools/passwordTypes';
+import passwordTypes from "../tools/passwordTypes";
 
-import weakIcon from '../imgs/weak.svg';
-import goodIcon from '../imgs/good.svg';
-import strongIcon from '../imgs/strong.svg';
-import veryStrongIcon from '../imgs/verystrong.svg';
-import godlikeIcon from '../imgs/godlike.svg';
+import weakIcon from "../imgs/weak.svg";
+import goodIcon from "../imgs/good.svg";
+import strongIcon from "../imgs/strong.svg";
+import veryStrongIcon from "../imgs/verystrong.svg";
+import godlikeIcon from "../imgs/godlike.svg";
 
 function IconWrapper({ passwordType }) {
   let src;

@@ -1,27 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import generatePassword from "generate-simple-password";
 
-import { Grid, OutlinedInput } from '@mui/material';
-import InputAdornment from '@mui/material/InputAdornment';
+import { Grid, OutlinedInput } from "@mui/material";
+import InputAdornment from "@mui/material/InputAdornment";
 
-import Title from './components/Title';
-import MyBadge from './components/MyBadge';
-import CopyButton from './components/CopyButton';
-import BottomCenterAlert from './components/BottomCenterAlert';
-import MySlider from './components/MySlider';
-import CenteredContainer from './components/CenteredContainer';
+import Title from "./components/Title";
+import MyBadge from "./components/MyBadge";
+import CopyButton from "./components/CopyButton";
+import BottomCenterAlert from "./components/BottomCenterAlert";
+import MySlider from "./components/MySlider";
+import CenteredContainer from "./components/CenteredContainer";
+import IconWrapper from "./components/IconWrapper";
 
-import passwordTypes from './tools/passwordTypes';
-import newPassword from './tools/newPassword';
-import IconWrapper from './components/IconWrapper';
+import passwordTypes from "./tools/passwordTypes";
 
 function App() {
   const [passwordType, setPasswordType] = useState(passwordTypes.strong);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [passwordLength, setPasswordLength] = useState(16);
   const [isShownSnackbar, setIsShownSnackbar] = useState(false);
 
   useEffect(() => {
-    setPassword(newPassword(passwordLength));
+    setPassword(
+      generatePassword({
+        length: passwordLength,
+        addUppercase: true,
+        addLowercase: true,
+        addNumbers: true,
+        addSpecialChars: true,
+      })
+    );
   }, []);
 
   function handlePasswordType(passwordLength) {
@@ -50,7 +58,15 @@ function App() {
   const handleSliderChange = (event, newLength) => {
     setPasswordLength(newLength);
     handlePasswordType(newLength);
-    setPassword(newPassword(passwordLength));
+    setPassword(
+      generatePassword({
+        length: passwordLength,
+        addUppercase: true,
+        addLowercase: true,
+        addNumbers: true,
+        addSpecialChars: true,
+      })
+    );
   };
 
   function handleCloseAlert() {
@@ -69,7 +85,7 @@ function App() {
         container
         spacing={2}
         style={{
-          width: '80vw',
+          width: "80vw",
           marginBottom: 60,
         }}
       >
@@ -79,11 +95,11 @@ function App() {
         <Grid item xs={12} lg={7}>
           <CenteredContainer>
             <OutlinedInput
-              id='password-field'
+              id="password-field"
               readOnly
               value={password}
               endAdornment={
-                <InputAdornment position='end'>
+                <InputAdornment position="end">
                   <MyBadge passwordType={passwordType} />
                 </InputAdornment>
               }
@@ -103,7 +119,7 @@ function App() {
       <BottomCenterAlert
         isShown={isShownSnackbar}
         onClose={handleCloseAlert}
-        alertMessage='Copied successfully'
+        alertMessage="Copied successfully"
         autoHideDuration={2000}
       />
     </CenteredContainer>
