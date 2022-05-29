@@ -6,68 +6,34 @@ import { blue } from "@mui/material/colors";
 import { green } from "@mui/material/colors";
 
 import passwordTypes from "../tools/passwordTypes";
-
+``
 function MyBadge({ passwordType }) {
+  let backgroundColor;
   switch (passwordType) {
     case passwordTypes.weak:
-      return (
-        <div
-          style={{
-            backgroundColor: red[600],
-            ...defaultStyles,
-          }}
-        >
-          {passwordType.toUpperCase()}
-        </div>
-      );
+      backgroundColor = red[600];
     case passwordTypes.good:
-      return (
-        <div
-          style={{
-            backgroundColor: yellow[700],
-            ...defaultStyles,
-          }}
-        >
-          {passwordType.toUpperCase()}
-        </div>
-      );
+      backgroundColor = yellow[700];
     case passwordTypes.strong:
-      return (
-        <div
-          style={{
-            backgroundColor: green[500],
-            ...defaultStyles,
-          }}
-        >
-          {passwordType.toUpperCase()}
-        </div>
-      );
+      backgroundColor = green[500];
     case passwordTypes.veryStrong:
-      return (
-        <div
-          style={{
-            backgroundColor: blue[600],
-            ...defaultStyles,
-          }}
-        >
-          {passwordType.toUpperCase()}
-        </div>
-      );
+      backgroundColor = blue[600];
     case passwordTypes.godlike:
-      return (
-        <div
-          style={{
-            backgroundColor: blue[200],
-            ...defaultStyles,
-          }}
-        >
-          {passwordType.toUpperCase()}!!!
-        </div>
-      );
-
+      backgroundColor = red[200];
     default:
       break;
   }
+
+  return (
+    <div
+      style={{
+        backgroundColor,
+        ...defaultStyles,
+      }}
+    >
+      {passwordType.toUpperCase()}!!!
+    </div>
+  );
 }
 
 const defaultStyles = {
