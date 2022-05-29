@@ -6,7 +6,7 @@ import { blue } from "@mui/material/colors";
 import { green } from "@mui/material/colors";
 
 import passwordTypes from "../tools/passwordTypes";
-``
+
 function MyBadge({ passwordType }) {
   let backgroundColor;
   switch (passwordType) {
